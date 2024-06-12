@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.3//EN"
+        "https://checkstyle.org/dtds/configuration_1_3.dtd">
+<!-- This is sample file. Please customize it for usage. -->
+<module name="Checker">
+    <property name="severity" value="warning"/>
+    <property name="charset" value="UTF-8"/>
+
+    <!-- Specify the Checker modules -->
+    <module name="TreeWalker">
+        <!-- Specify which checks to include -->
+        <module name="JavadocMethod"/>
+        <module name="FileTabCharacter"/>
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="caseIndent" value="4"/>
+            <property name="throwsIndent" value="4"/>
+            <property name="lineWrappingIndentation" value="4"/>
+        </module>
+        <!-- Add more modules and configurations as needed -->
+    </module>
+
+    <!-- Exclude files or directories from being checked -->
+    <module name="ExcludePackages">
+        <property name="packages" value="com.example.generated.*"/>
+    </module>
+
+    <!-- Suppress specific violations -->
+    <module name="SuppressionFilter">
+        <property name="file" value="${project.baseDir}/src/test/resources/checkstyle/suppressions.xml"/>
+    </module>
+
+    <!-- Specify the properties used by checks -->
+    <module name="Checker">
+        <property name="fileExtensions" value="java, properties"/>
+        <property name="cacheFile" value="${checkstyle.cache.file}"/>
+        <property name="listener" value="com.puppycrawl.tools.checkstyle.DefaultLogger"/>
+    </module>
+</module>

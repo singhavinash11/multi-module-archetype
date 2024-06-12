@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+        "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+        "https://checkstyle.org/dtds/suppressions_1_1.dtd">
+<!-- This is sample file. Please customize it for usage. -->
+<suppressions>
+    <!-- Suppress specific Checkstyle violations -->
+    <suppress checks="JavadocMethod" files="src/main/java/com/example/SomeClass.java">
+        <!-- Specify the reason for the suppression -->
+        <message key="javadoc.missingJavadocMethod">Javadoc is intentionally omitted for demonstration purposes.</message>
+    </suppress>
+    <!-- Add more suppressions as needed -->
+</suppressions>

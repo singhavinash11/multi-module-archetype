@@ -1,0 +1,49 @@
+<archetype-descriptor name="${artifactId}">
+    <requiredProperties>
+        <requiredProperty key="SPRING_BOOT_VERSION">
+            <defaultValue>3.2.5</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="APP_NAME"/>
+    </requiredProperties>
+    <modules>
+        <module id="${rootArtifactId}-conf" dir="__rootArtifactId__-conf" name="${rootArtifactId}-conf">
+            <fileSets>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/assembly</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/environments</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-model" dir="__rootArtifactId__-model" name="${rootArtifactId}-model">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-web" dir="__rootArtifactId__-web" name="${rootArtifactId}-web">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>

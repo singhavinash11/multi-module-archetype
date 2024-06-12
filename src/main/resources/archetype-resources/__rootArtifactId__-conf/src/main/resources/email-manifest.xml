@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<environments>
+    <environment name="TST"/>
+    <environment name="ACC"/>
+    <environment name="PRD"/>
+</environments>
